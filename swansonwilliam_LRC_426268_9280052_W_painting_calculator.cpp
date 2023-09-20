@@ -98,7 +98,12 @@ int main() {
 // returns true if string non-empty and all characters are alpha
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 bool all_alpha(string& buffer) {
-
+/* LRC
+*		When you need to validate a string, a range-based for loop
+*		makes it much easier.
+*
+*		Each loop iteration processes the next string character.
+*/
     if (!buffer.length())
         return false;
 
@@ -126,13 +131,6 @@ double get_paint_speed() {
         // user's input into buffer string
         cout << "\nAre you tired today? (y/n) ";
         cin >> buffer;
-
-        /* LRC
-        *		When you need to validate a string, a range-based for loop
-        *		makes it much easier.
-        *
-        *		Each loop iteration processes the next string character.
-        */
 
         // only process non-empty string input
         if (all_alpha(buffer)) {
