@@ -48,7 +48,7 @@ int main() {
 
 		// calculates painting hours to precision 1 decimal place
 		cout << FG_GREEN << setprecision(1) << fixed
-			<< "It will take you " << area / paint_speed
+			<< "\nIt will take you " << area / paint_speed
 			<< " hour(s) to paint " << area << " square feet.\n"
 			<< RESET;
 
@@ -86,14 +86,16 @@ double get_paint_speed() {
 		// force upper case for char input validation
 		char tired = toupper(buffer.at(0));
 
+		// flush console io buffer
+		cout << flush;
+
 		if (tired == 'Y')
 			return SPEED_TIRED;     // terminate validation loop
 
 		if (tired == 'N')
 			return SPEED_NOT_TIRED; // terminate validation loop
 
-		// flush console io buffer
-		cout << endl << "I don't understand, please type y or n.\n";
+		cout << "I don't understand, please type y or n.\n";
 
 	} // input validation loop
 }
@@ -103,9 +105,12 @@ double get_paint_speed() {
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 double get_area() {
 
-	cout << "What is the number of square feet that you need to paint today?\n";
+	cout << "What is the number of square feet that you need to paint today? ";
 	string buffer;
 	cin >> buffer;
+
+	// flush console io buffer
+	cout << flush;
 
 	// strtod() does not throw exceptions
 	return strtod(buffer.c_str(), nullptr);
