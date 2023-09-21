@@ -4,6 +4,8 @@
 // William Swanson
 // W Paints
 // September 17, 2023
+// 
+// Modified by Prof. Linda C
 //
 // - prompts the user If their tired or not and the area they need to paint
 // - calculates and displays the amount of time it would take to paint it in hours
@@ -95,7 +97,6 @@ double get_paint_speed() {
 
 	} // input validation loop
 }
-
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // - returns number of square feet to paint
