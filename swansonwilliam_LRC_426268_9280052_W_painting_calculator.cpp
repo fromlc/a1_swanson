@@ -160,15 +160,15 @@ double get_input_area() {
 		// Get the regex object 
 		std::regex rx(pattern);
 
-		// User input is string input to regex object
+		// Need a string var for iteration to find number of matches
 		str_input = user_input;
 
-		// Count the number of matches inside the iterator
+		// Count the number of matches with the regex pattern
 		std::ptrdiff_t number_of_matches = std::distance(
 			std::sregex_iterator(str_input.begin(), str_input.end(), rx),
 			std::sregex_iterator());
 
-		// One match means well-formed floating point number
+		// One match means input is a valid floating point number
 		if (number_of_matches == 1)
 			break;
 
