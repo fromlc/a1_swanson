@@ -34,7 +34,7 @@ const double SPEED_NOT_TIRED = 400;
 const int MAX_CIN_CHARS = 16;
 // get_stream_char() reports non-alpha input as this
 const char CHAR_INPUT_UNKNOWN = '?';
-// pattern for regex compare with area input
+// pattern is positive floating point number with no commas, for area
 const std::string REGEX_FLOATING_POINT = "^[0-9]+[.]?[0-9]*$";
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -154,7 +154,7 @@ double get_input_area() {
 		// clear std::cin's error flags to allow more input
 		std::cin.clear();
 
-		// #TODO Regex expression does not allow commas in fp input
+		// pattern is positive floating point number with no commas
 		std::string pattern(REGEX_FLOATING_POINT);
 
 		// Get the regex object 
