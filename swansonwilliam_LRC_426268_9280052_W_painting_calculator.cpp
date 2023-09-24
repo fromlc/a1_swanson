@@ -7,8 +7,8 @@
 // 
 // Modified by Prof. Linda C
 //
-// - prompts the user If their tired or not and the area they need to paint
-// - calculates and displays the amount of time it would take to paint it in hours
+// - prompts the user If they're tired or not and the area they need to paint
+// - calculates and displays the painting time in hours
 // 
 // Thanks to StackOverflow for regex code:
 // https://stackoverflow.com/questions/36319706/c-regex-equivalent-for-stringfind
