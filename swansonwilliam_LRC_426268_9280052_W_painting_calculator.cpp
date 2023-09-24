@@ -175,8 +175,6 @@ double get_input_area() {
 		std::cerr << FG_CYAN
 			<< "Please enter a floating point number with no commas.\n"
 			<< RESET;
-
-		//std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	}
 
 	// return floating point value that matches regex pattern
