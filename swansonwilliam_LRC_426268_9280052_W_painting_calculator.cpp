@@ -34,7 +34,7 @@ const double SPEED_NOT_TIRED = 400;
 const int MAX_CIN_CHARS = 16;
 // get_stream_char() reports non-alpha input as this
 const char CHAR_INPUT_UNKNOWN = '?';
-// regex pattern is positive floating point number with no commas, for area
+// regex pattern: positive floating point number with no commas, for area
 const std::string REGEX_FLOATING_POINT = "^[0-9]+[.]?[0-9]*$";
 
 //------------------------------------------------------------------------------
@@ -157,18 +157,18 @@ double get_input_area() {
 		// pattern is positive floating point number with no commas
 		std::string pattern(REGEX_FLOATING_POINT);
 
-		// Get the regex object 
+		// create the regex object 
 		std::regex rx(pattern);
 
-		// Need a string var for iteration to find number of matches
+		// need string var for iterator that gives number of matches
 		str_input = user_input;
 
-		// Count the number of matches with the regex pattern
+		// count number of matches with regex pattern
 		std::ptrdiff_t number_of_matches = std::distance(
 			std::sregex_iterator(str_input.begin(), str_input.end(), rx),
 			std::sregex_iterator());
 
-		// One match means input is a valid floating point number
+		// one match means input is a valid floating point number
 		if (number_of_matches == 1)
 			break;
 
